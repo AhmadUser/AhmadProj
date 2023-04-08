@@ -1,0 +1,82 @@
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\Project.exe.config
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\Project.exe
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\Project.pdb
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\AForge.dll
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\AForge.Video.dll
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\FontAwesome.WPF.dll
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\zxing.dll
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\zxing.presentation.dll
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\AForge.xml
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\AForge.Video.xml
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\FontAwesome.WPF.xml
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\zxing.xml
+C:\Users\ORYX 1\source\repos\Project\Project\bin\Debug\zxing.presentation.xml
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\AddAddress.g.cs
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\AddCustomer.g.cs
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\EditItems.g.cs
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\index1.g.cs
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\MainWindow.g.cs
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\AddItemView.g.cs
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\App.g.cs
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\Project_MarkupCompile.cache
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\Project_MarkupCompile.lref
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\AddAddress.baml
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\AddCustomer.baml
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\EditItems.baml
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\index1.baml
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\MainWindow.baml
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\AddItemView.baml
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\Project.g.resources
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\Project.csproj.CopyComplete
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\Project.exe
+C:\Users\ORYX 1\source\repos\Project\Project\obj\Debug\Project.pdb
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\Project.exe.config
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\Project.exe
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\Project.pdb
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\AForge.dll
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\AForge.Video.dll
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\FontAwesome.WPF.dll
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\zxing.dll
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\zxing.presentation.dll
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\AForge.xml
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\AForge.Video.xml
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\FontAwesome.WPF.xml
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\zxing.xml
+C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\zxing.presentation.xml
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddAddress.g.cs
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddCustomer.g.cs
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\CustomersList.g.cs
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\EditItems.g.cs
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\index1.g.cs
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\MainWindow.g.cs
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddItemView.g.cs
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\App.g.cs
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project_MarkupCompile.cache
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project_MarkupCompile.lref
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddAddress.baml
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddCustomer.baml
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\CustomersList.baml
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\EditItems.baml
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\index1.baml
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\MainWindow.baml
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddItemView.baml
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.g.resources
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.csproj.CopyComplete
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.exe
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.pdb

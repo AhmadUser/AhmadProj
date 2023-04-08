@@ -1,0 +1,49 @@
+﻿<Window x:Class="Project.AddItemView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project" xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        Background="AntiqueWhite"
+        WindowState="Maximized"
+        Title="Add Item" Height="450" Width="800">
+
+    <Grid Margin="40,20,430,0" Background="CornflowerBlue" Height="400" Width="400">
+        <Label Content="Item Properties " Width="230" HorizontalAlignment="Left" Margin="60,0,0,0" Foreground="AntiqueWhite" FontFamily="Century Gothic" FontSize="20"/>
+        <Label Content="Barcode" Width="200" HorizontalAlignment="Left" Margin="60,40,0,0" Foreground="AntiqueWhite" FontFamily="Century Gothic" FontSize="20"/>
+        <TextBox x:Name="barcode"  Margin="60,50,140,270" Foreground="CornflowerBlue" FontFamily="Century Gothic" FontSize="20" Height="20"/>
+        <Label Content="InitialPrice" Width="200" HorizontalAlignment="Left" Margin="60,100,0,0" Foreground="AntiqueWhite" FontFamily="Century Gothic" FontSize="20"/>
+        <TextBox x:Name="initialPrice"  Margin="60,130,0,250" Foreground="AntiqueWhite" FontFamily="Century Gothic" FontSize="20" HorizontalAlignment="Left" Width="200"/>
+        <Label Content="SellingPrice" Width="200" HorizontalAlignment="Left" Margin="60,150,0,210" Foreground="AntiqueWhite" FontFamily="Century Gothic" FontSize="20"/>
+        <TextBox x:Name="sellingPrice" HorizontalAlignment="Left" Height="18" Margin="60,190,0,0"  VerticalAlignment="Top" Width="200"/>
+        <Label Content="Company Name" HorizontalAlignment="Left" Margin="60,210,0,0" VerticalAlignment="Top" Height="40" Width="200" FontFamily="Century Gothic" FontSize="20" Foreground="AntiqueWhite"/>
+        <TextBox x:Name="companyName" HorizontalAlignment="Left" Height="18" Margin="60,240,0,0"  VerticalAlignment="Top" Width="200"/>
+        <Label Content="Private Name" HorizontalAlignment="Left" Margin="60,260,0,0" VerticalAlignment="Top" Height="40" Width="200" FontFamily="Century Gothic" FontSize="20" Foreground="AntiqueWhite"/>
+        <TextBox x:Name="privateName" HorizontalAlignment="Left" Height="18" Margin="60,290,0,0"  VerticalAlignment="Top" Width="200"/>
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="60,310,0,0" VerticalAlignment="Top" Height="40" Width="200" FontFamily="Century Gothic" FontSize="20" Foreground="AntiqueWhite"/>
+        <TextBox x:Name="qunatity" HorizontalAlignment="Left" Height="18" Margin="60,290,0,0"  Width="200"/>
+
+        <Button x:Name="saveBttn" Height="25"   Content="Save" Margin="60,360,256,0" Background="Green" Width="80" Foreground="White" Click="saveItem"  />
+        <GridSplitter HorizontalAlignment="Left" Height="314" Margin="158,-119,0,0" VerticalAlignment="Top" Width="5" RenderTransformOrigin="0.5,0.5" Background="White">
+            <GridSplitter.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </GridSplitter.RenderTransform>
+        </GridSplitter>
+        <Label Background="CornflowerBlue" Foreground="White" Content="List Of Cameras" HorizontalAlignment="Left" Margin="480,60,-226,0" VerticalAlignment="Top" Width="140"/>
+        <ListBox x:Name="listOfCams" Background="White" Foreground="CornflowerBlue" HorizontalAlignment="Left" Height="170" Margin="480,90,-226,0" VerticalAlignment="Top" Width="140"/>
+        <Button Content="Start Scanner" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="480,220,-226,0" Background="CornflowerBlue" Foreground="White" Click="startScanner"/>
+        <fa:ImageAwesome
+            Spin="True" SpinDuration="3" x:Name="spinner" Margin="0,50,0,0" Icon="Spinner" Foreground="AntiqueWhite" Height="150" Visibility="Hidden"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="625,0,-340,364" Width="80" Background="Red" Foreground="White" Click="backAction"/>
+
+
+    </Grid>
+
+
+</Window>
