@@ -175,6 +175,78 @@ namespace Project
             }
 
         }
+        public static async Task<List<Customer>> getCustomers()
+        {
+            List<Customer> cutomers = new List<Customer>();
+            try
+            {
+                HttpClient client = new HttpClient();
+                string request = ApiServices.GET_CUSTOMERS_API;
+                request += "?Admin=" + Admin;
+                HttpResponseMessage response = await client.GetAsync(request);
+                response.EnsureSuccessStatusCode();
+                var responseBody = await response.Content.ReadAsStringAsync();
+                dynamic result = JsonConvert.DeserializeObject(responseBody);
+                foreach (var item in result)
+                {
+                    Customer temp = new Customer();
+                    try
+                    {
+                        temp.FirstName = item.FirstName;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainWindow.writeToLogs(ex.Message);
+                        temp.FirstName = "NA";
+                    }
+                    try
+                    {
+                        temp.LastName = item.LastName;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainWindow.writeToLogs(ex.Message);
+                        temp.LastName = "NA";
+                    }
+                    try
+                    {
+                        temp.NickName = item.NickName;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainWindow.writeToLogs(ex.Message);
+                        temp.NickName = "NA";
+                    }
+                    try
+                    {
+                        temp.Telephone = item.Telephone;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainWindow.writeToLogs(ex.Message);
+                        temp.Telephone = ""+-1;
+                    }
+                    try
+                    {
+                        temp.AddressID = item.AddressID;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainWindow.writeToLogs(ex.Message);
+                        temp.AddressID = 0;
+                    }
+
+                    cutomers.Add(temp);
+                }
+                return cutomers;
+            }
+            catch (Exception ex)
+            {
+                MainWindow.writeToLogs("GET ALL ITEM EXCEPTION \n" + ex.Message);
+                return null;
+            }
+
+        }
         public class Authentication
         {
             public bool Authenticated { get; set; }

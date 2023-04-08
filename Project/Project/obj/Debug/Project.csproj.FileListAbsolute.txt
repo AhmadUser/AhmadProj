@@ -58,6 +58,7 @@ C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\zxing.presentatio
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddAddress.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddCustomer.g.cs
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\CreateOrder.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\CustomersList.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\EditItems.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\index1.g.cs
@@ -68,6 +69,7 @@ C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project_MarkupCom
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project_MarkupCompile.lref
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddAddress.baml
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddCustomer.baml
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\CreateOrder.baml
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\CustomersList.baml
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\EditItems.baml
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\index1.baml

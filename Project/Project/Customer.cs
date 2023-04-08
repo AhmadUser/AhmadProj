@@ -13,6 +13,11 @@ namespace Project
         public string NickName { get; set; }
         public string Telephone { get; set; }
         public int AddressID { get; set; }
+        public Customer()
+        {
+
+        }
+
         public Customer(string firstName, string lastName, string nickName, string telephone, int addreddID)
         {
             FirstName = firstName;
