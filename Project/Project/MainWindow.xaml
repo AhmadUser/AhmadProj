@@ -6,24 +6,46 @@
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:local="clr-namespace:Project"
         mc:Ignorable="d"
-        Background="CornflowerBlue"
+        Background="White"
         WindowStartupLocation="CenterScreen"
         Title="Saver" Height="350" Width="500">
     <StackPanel>
         <Grid>
-            <Grid HorizontalAlignment="Left" Height="209" Margin="100,50,0,0" VerticalAlignment="Top" Width="300" Background="AntiqueWhite">
-                <Button x:Name="showPass"  Content="Show" HorizontalAlignment="Left" Margin="265,101,0,0" VerticalAlignment="Top" Width="25" Height="30" FontSize="8" Background="CornflowerBlue" Foreground="AntiqueWhite" Click="showPassFunc"/>
+            <Grid HorizontalAlignment="Left" Height="209" Margin="100,50,0,0" VerticalAlignment="Top" Width="300" Background="DarkBlue">
+                <Button x:Name="showPass"  Content="Show" HorizontalAlignment="Left" Margin="265,101,0,0" VerticalAlignment="Top" Width="25" Height="30" FontSize="8" Background="LightBlue" Foreground="DarkBlue" Click="showPassFunc">
+                    <Button.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
             </Grid>
-            <Label Content="User Name:" HorizontalAlignment="Left" Margin="150,80,0,0" VerticalAlignment="Top" Foreground="CornflowerBlue" FontFamily="Century Gothic"/>
+            <Label Content="User Name:" HorizontalAlignment="Left" Margin="150,80,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Century Gothic">
+            </Label>
             <TextBox HorizontalAlignment="Left" x:Name="user"  Height="30" Margin="150,100,0,0"  VerticalAlignment="Top" Width="200" />
-            <Label Content="Password:" HorizontalAlignment="Left" Margin="150,130,0,0" VerticalAlignment="Top" Foreground="CornflowerBlue" FontFamily="Century Gothic"/>
+            <Label Content="Password:" HorizontalAlignment="Left" Margin="150,130,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Century Gothic"/>
             <TextBox x:Name="passVisible"  HorizontalAlignment="Left" Margin="150,150,0,0" VerticalAlignment="Top" Width="200" Height="30" Visibility="Hidden" />
             <PasswordBox x:Name="pass"  HorizontalAlignment="Left" Margin="150,150,0,0" VerticalAlignment="Top" Width="200" Height="30"  />
-            <Button Content="Login"  HorizontalAlignment="Left" Margin="200,213,0,0" VerticalAlignment="Top" Width="75" Foreground="white" FontFamily="Century Gothic" Background="CornflowerBlue" Click="performLoginAsync"/>
+            <Button Content="Login"  HorizontalAlignment="Left" Margin="150,210,0,0" VerticalAlignment="Top" Width="92" Foreground="white" FontFamily="Century Gothic" Background="CornflowerBlue" Click="performLoginAsync" Height="21"/>
+            <Button Content="Cancel"  HorizontalAlignment="Left" Margin="258,210,0,0" VerticalAlignment="Top" Width="92" Foreground="white" FontFamily="Century Gothic" Background="Red" Click="performLoginAsync" Height="21"/>
+
             <fa:ImageAwesome
-            Spin="True" SpinDuration="3" x:Name="spinner" Margin="0,50,0,0" Icon="Spinner" Foreground="CornflowerBlue" Height="150" Visibility="Hidden"/>
+            Spin="True" SpinDuration="3" x:Name="spinner" Margin="0,50,0,0" Icon="Home" Foreground="DarkBlue" Height="50" Visibility="Hidden"/>
         </Grid>
 
 
     </StackPanel>
 </Window>
+
+
