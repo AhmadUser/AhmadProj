@@ -41,10 +41,8 @@
             <Button Content="Cancel"  HorizontalAlignment="Left" Margin="258,210,0,0" VerticalAlignment="Top" Width="92" Foreground="white" FontFamily="Century Gothic" Background="Red" Click="performLoginAsync" Height="21"/>
 
             <fa:ImageAwesome
-            Spin="True" SpinDuration="3" x:Name="spinner" Margin="0,50,0,0" Icon="Home" Foreground="DarkBlue" Height="50" Visibility="Hidden"/>
+            Spin="True" SpinDuration="3" x:Name="spinner" Margin="0,50,0,0" Icon="Spinner" Foreground="DarkBlue" Height="50" Visibility="Hidden"/>
         </Grid>
-
-
     </StackPanel>
 </Window>
 

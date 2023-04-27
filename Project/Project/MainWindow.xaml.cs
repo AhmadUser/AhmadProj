@@ -106,8 +106,10 @@ namespace Project
                 spinner.Visibility = Visibility.Hidden;
                 if (loginSuccess)
                 {
-                    index1 index1 = new index1();
-                    index1.Show();
+                    // index1 index1 = new index1();
+                    //index1.Show();
+                    Menue m = new Menue();
+                    m.Show();
                     this.Close();
                 }
                 else

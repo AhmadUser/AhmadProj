@@ -94,6 +94,9 @@
     <Compile Include="EditItems.xaml.cs">
       <DependentUpon>EditItems.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Menue.xaml.cs">
+      <DependentUpon>Menue.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Popup.cs" />
     <Compile Include="RequestAsync.cs" />
     <Compile Include="AddItemView.xaml.cs">
@@ -142,6 +145,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="AddItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menue.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

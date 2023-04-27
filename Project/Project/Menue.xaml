@@ -1,0 +1,28 @@
+﻿<Window x:Class="Project.Menue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project"
+        mc:Ignorable="d"
+        Title="Menue" Height="450" Width="800">
+    <Grid Background="LightGray">
+        <Menu>
+            <MenuItem Header="New Order" Height="30" Width="100" Background="DarkBlue" Foreground="White">
+            </MenuItem>
+            <MenuItem Header="Store Manager" Height="30" Width="100" Background="DarkBlue" Foreground="White">
+            </MenuItem>
+            <MenuItem Header="Customers" Height="30" Width="100" Background="DarkBlue" Foreground="White">
+            </MenuItem>
+            <MenuItem Header="Dealers" Height="30" Width="100" Background="DarkBlue" Foreground="White">
+            </MenuItem>
+            <MenuItem Header="Settings" Height="30" Width="100" Background="DarkBlue" Foreground="White">
+            </MenuItem>
+
+        </Menu>
+
+
+    </Grid>
+</Window>
+
+
