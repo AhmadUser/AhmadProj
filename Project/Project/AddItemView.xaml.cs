@@ -82,9 +82,10 @@ namespace Project
             MainWindow.writeToLogs("Thread running ");
             Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
             BarcodeReader barcodeReader = new BarcodeReader();
-            var result = barcodeReader.Decode(bitmap);
-              if (result != null)
+            Result[] results = barcodeReader.DecodeMultiple(bitmap);
+            if (results != null)
               {
+                Result result = results[0];
                   MainWindow.writeToLogs("Barcode " + result.Text);
                   Console.Beep();
                   this.Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() =>
@@ -122,7 +123,7 @@ namespace Project
         }
         private void backAction(object sender, RoutedEventArgs e)
         {
-            index1 index1 = new index1();
+            Menue index1 = new Menue();
             this.Close();
             index1.Show();
         }

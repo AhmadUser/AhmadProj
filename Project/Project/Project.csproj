@@ -102,6 +102,7 @@
     <Compile Include="AddItemView.xaml.cs">
       <DependentUpon>AddItemView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scanner.cs" />
     <Page Include="AddAddress.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

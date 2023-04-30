@@ -5,24 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project"
         mc:Ignorable="d"
+        WindowState="Maximized"
         Title="Menue" Height="450" Width="800">
     <Grid Background="LightGray">
         <Menu>
-            <MenuItem Header="New Order" Height="30" Width="100" Background="DarkBlue" Foreground="White">
+            <MenuItem Header="New Order" Height="30" Width="120" Background="DarkBlue" Foreground="White">
             </MenuItem>
-            <MenuItem Header="Store Manager" Height="30" Width="100" Background="DarkBlue" Foreground="White">
+            <MenuItem Header="Store Manager" Height="30" Width="120" Background="DarkBlue" Foreground="White">
+                <MenuItem Header="Add" Height="30" Width="120" Background="DarkBlue" Foreground="White" Click="goToAddItem"/>
+                <MenuItem Header="Edit" Height="30" Width="120" Background="DarkBlue" Foreground="White"/>
             </MenuItem>
-            <MenuItem Header="Customers" Height="30" Width="100" Background="DarkBlue" Foreground="White">
+            <MenuItem Header="Customers" Height="30" Width="120" Background="DarkBlue" Foreground="White">
+                <MenuItem Header="Add" Height="30" Width="120" Background="DarkBlue" Foreground="White"/>
+                <MenuItem Header="Edit" Height="30" Width="120" Background="DarkBlue" Foreground="White"/>
             </MenuItem>
-            <MenuItem Header="Dealers" Height="30" Width="100" Background="DarkBlue" Foreground="White">
+            <MenuItem Header="Dealers" Height="30" Width="120" Background="DarkBlue" Foreground="White">
             </MenuItem>
-            <MenuItem Header="Settings" Height="30" Width="100" Background="DarkBlue" Foreground="White">
+            <MenuItem Header="Orders" Height="30" Width="120" Background="DarkBlue" Foreground="White">
             </MenuItem>
-
+            <MenuItem Header="Settings" Height="30" Width="120" Background="DarkBlue" Foreground="White">
+            </MenuItem>
         </Menu>
-
+        <Grid Margin="601,38,9.6,19.8" Background="Beige"/>
+        <Label HorizontalAlignment="Left" Margin="152,250,0,20" VerticalAlignment="Top" Foreground="DarkBlue" Background="Azure">
+            <Label Content="Start Scanner  to scan for an item" Width="365" Height="45"/>
+        </Label>
+        <Button HorizontalAlignment="Left" Margin="152,325,0,0" VerticalAlignment="Top" Width="75" >
+            <Button x:Name="startScanner" Content="Start Scanner" Width="75" Height="37" Background="DarkBlue" Foreground="White" Click="fireCamera" />
+        </Button>
 
     </Grid>
 </Window>
 
 
+
+ 

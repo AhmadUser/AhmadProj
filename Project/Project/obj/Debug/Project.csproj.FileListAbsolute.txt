@@ -55,7 +55,6 @@ C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\FontAwesome.WPF.x
 C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\zxing.xml
 C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\zxing.presentation.xml
-C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddAddress.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddCustomer.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\CreateOrder.g.cs
@@ -64,6 +63,7 @@ C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\EditItems.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\index1.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\MainWindow.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddItemView.g.cs
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Menue.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\App.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project_MarkupCompile.cache
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project_MarkupCompile.lref
@@ -75,6 +75,7 @@ C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\EditItems.baml
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\index1.baml
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\MainWindow.baml
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddItemView.baml
+C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Menue.baml
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.g.resources
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.Properties.Resources.resources
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
