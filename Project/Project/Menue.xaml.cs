@@ -40,7 +40,7 @@ namespace Project
 
         private void fireCamera(object sender, RoutedEventArgs e)
         {
-            Scanner s = new Scanner();
+           // Scanner s = new Scanner();
         }
         public void   barcodeCheckerWorker()
         {
