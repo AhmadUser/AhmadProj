@@ -39,15 +39,18 @@ namespace Project
 
         public ObservableCollection<Item> Products { get; set; }
         public long totalPrice;
-        private bool isChecked=true;
+        private bool isChecked = true;
 
         public bool IsChecked
         {
             get { return isChecked; }
             set
             {
-                isChecked = value;
-                OnPropertyChanged(nameof(IsChecked));
+                if (isChecked != value)
+                {
+                    isChecked = value;
+                    OnPropertyChanged(nameof(IsChecked));
+                }
             }
         }
 
@@ -94,11 +97,12 @@ namespace Project
         public Menue()
         {
             InitializeComponent();
+            DataContext = this;
             TotalPrice = 0;
             Products = new ObservableCollection<Item>();
             Products.CollectionChanged += itemsListChanged;
             Closing += new CancelEventHandler(DataWindow_Closing);
-            DataContext = this;
+            
             itemsScanned = new List<Item>();
             thread = new Thread(barcodeWatcher);
             thread.Start();
@@ -113,7 +117,7 @@ namespace Project
         {
             if (e.Action == NotifyCollectionChangedAction.Add)
             {
-               
+
                 // Element(s) added to the collection
                 foreach (var newItem in e.NewItems)
                 {
@@ -310,21 +314,53 @@ namespace Project
             // Check if an item is selected and handle the double-click event here
             if (listItems.SelectedItem != null)
             {
-                Item itemDoubleClicked=(Item)listItems.SelectedItem;
-                bool beforeDoubleClick = itemDoubleClicked.IsSelected;
-                itemDoubleClicked.IsSelected=!beforeDoubleClick;
-                IsChecked = true;
-                Products.ElementAt<Item>(listItems.SelectedIndex).IsSelected = beforeDoubleClick;
+                Item itemDoubleClicked = (Item)listItems.SelectedItem;
+                Products.ElementAt<Item>(listItems.SelectedIndex).IsSelected = !itemDoubleClicked.IsSelected;
+                totalPrice -= itemDoubleClicked.SellingPrice;
+                priceContainer.Text = "" + totalPrice;
+                isChecked = false;
+
 
             }
         }
 
+        private void selectItem_Checked(object sender, RoutedEventArgs e)
+        {
+             
+            var itemModel = (sender as CheckBox)?.DataContext as Item;
 
+            if (itemModel != null)
+            {
+                modifyList(itemModel, true);
+            }
+        }
+        private void unselectItem_Checked(object sender, RoutedEventArgs e)
+        {
 
+            var itemModel = (sender as CheckBox)?.DataContext as Item;
 
+            if (itemModel != null)
+            {
+                modifyList(itemModel, false);
+            }
+        }
+        private void modifyList(Item itemSelected,bool selected)
+        {
+            long newTotal = 0;
 
-
-
+            int index=Products.IndexOf(itemSelected);
+            Products.ElementAt<Item>(index).IsSelected = selected;
+            for(int i = 0; i < Products.Count; i++)
+            {
+                if (Products.ElementAt<Item>(i).IsSelected)
+                {
+                    newTotal += Products.ElementAt<Item>(i).SellingPrice;
+                }
+            }
+            totalPrice = newTotal;
+            priceContainer.Text = "" + newTotal;
+        }
     }
+
 }
 

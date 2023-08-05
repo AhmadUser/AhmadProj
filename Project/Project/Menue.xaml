@@ -38,40 +38,32 @@
             </Menu>
             <!--SelectionChanged="onSelectedItem"-->
             <ListView HorizontalAlignment="Left" x:Name="listItems" Margin="20,50,0,0" Background="White" Foreground="#007ACC" Visibility="Visible" Height="{Binding ActualHeight, ElementName=primary}" Width="520" ItemsSource="{Binding Products}" MouseDoubleClick="ListView_MouseDoubleClick">
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="ListViewItem">
-                        <Setter Property="Background" Value="Transparent" />
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding IsChecked}">
-                                <Setter Property="Background" Value="Yellow" />
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </ListView.ItemContainerStyle>
+        
+
+
 
                 <ListView.View>
+                    
                     <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Item Name">
+                        
                         <GridViewColumn Header="Item Name" Width="150" DisplayMemberBinding="{Binding PrivateName}" />
                         <GridViewColumn Header="Item Barcode" Width="150" DisplayMemberBinding="{Binding Barcode}" />
                         <GridViewColumn Header="Item Price" Width="150" DisplayMemberBinding="{Binding SellingPrice}" />
 
-                        <!-- Add a CheckBox column for selection -->
-                        <!--<GridViewColumn>
-                            <GridViewColumnHeader>
-                                <CheckBox x:Name="selectAllCheckBox" Click="SelectAllCheckBox_Click" />
-                            </GridViewColumnHeader>
+                        <!-- Add a CheckBox column for selection IsSelected-->
+                        <GridViewColumn Header="Select" >
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                    <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" Checked="selectItem_Checked" x:Name="selectItem" Unchecked="unselectItem_Checked"   />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
-                        </GridViewColumn>-->
+                        </GridViewColumn>
 
                     </GridView>
                 </ListView.View>
-      
+
             </ListView>
-    
+
 
             <Grid x:Name="incrementer" Margin="570,144,107,0" Background="White" Height="182" VerticalAlignment="Top" Width="200">
                 <Grid.RowDefinitions>
