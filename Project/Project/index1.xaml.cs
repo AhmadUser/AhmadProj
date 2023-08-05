@@ -28,9 +28,9 @@ namespace Project
 
         private  void addItem(object sender, RoutedEventArgs e)
         {
-            AddItemView window = new AddItemView();
-            window.Show();
-            this.Close();
+            //AddItemView window = new AddItemView();
+            //window.Show();
+            //this.Close();
 
         }
         private void editItems(object sender, RoutedEventArgs e)

@@ -13,12 +13,17 @@ namespace Project
         public string CompanyName { get; set; }
         public string PrivateName { get; set; }
         public string Quantity { get; set; }
-        public int Barcode { get; set; }
+        public long Barcode { get; set; }
+        public bool IsSelected { get; set; }
         public Item()
         {
 
         }
-        public Item(int initialPrice, int sellingPrice, string companyName, string privateName, int barcode,string quantity)
+        public Item selectItem()
+        {
+            return new Item(this.InitialPrice, this.SellingPrice, this.CompanyName, this.PrivateName, this.Barcode, this.Quantity, true);        
+        }
+        public Item(int initialPrice, int sellingPrice, string companyName, string privateName, long barcode,string quantity)
         {
             InitialPrice = initialPrice;
             SellingPrice = sellingPrice;
@@ -26,6 +31,16 @@ namespace Project
             PrivateName = privateName;
             Barcode = barcode;
             Quantity = quantity;
+        }
+        public Item(int initialPrice, int sellingPrice, string companyName, string privateName, long barcode, string quantity,bool select)
+        {
+            InitialPrice = initialPrice;
+            SellingPrice = sellingPrice;
+            CompanyName = companyName;
+            PrivateName = privateName;
+            Barcode = barcode;
+            Quantity = quantity;
+            IsSelected = select;
         }
         public void toString()
         {

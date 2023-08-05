@@ -11,7 +11,29 @@ namespace Project
     public class RequestAsync
     {
         public static string Admin { get; set; }
-        public static async Task<bool> loginRequestAsync(string adminInput, string passInput)
+        public static async Task<bool> editItemsAsync(Item item)
+        {
+            try
+            {
+                HttpClient request = new HttpClient();
+                string api = ApiServices.EDIT_ITEM_API;
+                string args = "?Barcode=" + item.Barcode + "&InitialPrice=" + item.InitialPrice + "&SellingPrice=" + item.SellingPrice + "&PrivateName=" + item.PrivateName + "&CompanyName=" + item.CompanyName + "&Admin=" + Admin + "&Quantity=" + item.Quantity;
+                api += args;
+                HttpResponseMessage response = await request.GetAsync(api);
+                string responseCode = response.StatusCode.ToString();
+                MainWindow.writeToLogs("=============" + responseCode);
+                response.EnsureSuccessStatusCode();
+                var responseBody = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<Response>(responseBody);
+                return result.Succeeds;
+            }
+            catch (Exception ex)
+            {
+                MainWindow.writeToLogs("LOGIN EXCEPTION \n" + ex.Message);
+                return false;
+            }
+        }
+        public static async Task<Authentication> loginRequestAsync(string adminInput, string passInput)
         {
             try
             {
@@ -26,12 +48,15 @@ namespace Project
                 response.EnsureSuccessStatusCode();
                 var responseBody = await response.Content.ReadAsStringAsync();
                 var result = JsonConvert.DeserializeObject<Authentication>(responseBody);
-                return result.Authenticated;
+                return result;
             }
             catch (Exception ex)
             {
                 MainWindow.writeToLogs("LOGIN EXCEPTION \n" + ex.Message);
-                return false;
+                Authentication failure=new Authentication();
+                failure.Message = "Request Failed";
+                failure.Authenticated = false;
+                return failure;
             }
         }
         public static async Task<bool> addCustomerAsync(Customer customer)
@@ -79,7 +104,8 @@ namespace Project
                 return 0;
             }
         }
-     
+
+
         public static  async Task<bool> newItemAsync(Item item)
         {
             bool succeed = true;
@@ -87,6 +113,7 @@ namespace Project
             {
                 HttpClient client = new HttpClient();
                 string request = ApiServices.ADD_ITEM_API;
+                MainWindow.writeToLogs("Testing just before the requexst sentttt " + item.Barcode);
                 request += "?Barcode=" + item.Barcode + "&InitialPrice=" + item.InitialPrice + "&SellingPrice=" + item.SellingPrice + "&PrivateName=" + item.PrivateName + "&CompanyName=" + item.CompanyName + "&Admin=" + Admin + "&Quantity=" + item.Quantity;
                 HttpResponseMessage response = await client.GetAsync(request);
             }catch(Exception ex)
@@ -95,6 +122,86 @@ namespace Project
                 succeed = false;
             }
             return succeed;
+        }
+        public static async Task<Item> getItemByBarcodeAsync(long barcode)
+        {
+            Item item = new Item();
+            try
+            {
+                HttpClient client = new HttpClient();
+                string request = ApiServices.GET_ITEM_BY_BARCODE;
+                request += "?Barcode=" + barcode + "&Admin=" + Admin;
+                HttpResponseMessage response = await client.GetAsync(request);
+                response.EnsureSuccessStatusCode();
+                var responseBody = await response.Content.ReadAsStringAsync();
+                dynamic result = JsonConvert.DeserializeObject(responseBody);
+                foreach (var itemTemp in result)
+                {
+                    Item temp = new Item();
+                    try
+                    {
+                        temp.InitialPrice = itemTemp.InitialPrice;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainWindow.writeToLogs(ex.Message);
+                        temp.InitialPrice = -1;
+                    }
+                    try
+                    {
+                        temp.SellingPrice = itemTemp.SellingPrice;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainWindow.writeToLogs(ex.Message);
+                        temp.SellingPrice = -1;
+                    }
+                    try
+                    {
+                        temp.PrivateName = itemTemp.PrivateName;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainWindow.writeToLogs(ex.Message);
+                        temp.PrivateName = "NA";
+                    }
+                    try
+                    {
+                        temp.Barcode = itemTemp.Barcode;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainWindow.writeToLogs(ex.Message);
+                        temp.Barcode = -1;
+                    }
+                    try
+                    {
+                        temp.CompanyName = itemTemp.CompanyName;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainWindow.writeToLogs(ex.Message);
+                        temp.CompanyName = "NA";
+                    }
+                    try
+                    {
+                        temp.Quantity = itemTemp.quantity;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainWindow.writeToLogs(ex.Message);
+                        temp.Quantity = "NA";
+                    }
+                    item = temp;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MainWindow.writeToLogs("ADD NEW ITEM EXCEPTION \n" + ex.Message);
+                item = null;
+            }
+            return item;
         }
         public static async Task<List<Item>> getItems()
         {
@@ -250,6 +357,7 @@ namespace Project
         public class Authentication
         {
             public bool Authenticated { get; set; }
+            public string Message { get; set; }
         }
         public class AddAddressResponse
         {

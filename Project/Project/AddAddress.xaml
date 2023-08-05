@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Background="CornflowerBlue"
+        Icon="C:\Program Files (x86)\Saver\icon.png"
         Title="AddAddress" Height="350" Width="500">
     <Grid>
         <Label Content="Street Name" HorizontalAlignment="Left" Margin="120,60,0,0" VerticalAlignment="Top" Background="AntiqueWhite" Foreground="CornflowerBlue" Width="70" Height="25" FontSize="10"/>

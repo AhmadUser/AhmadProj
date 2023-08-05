@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Background="AntiqueWhite"
         WindowState="Maximized"
+        Icon="C:\Program Files (x86)\Saver\icon.png"
         Title="CustomersList" Height="450" Width="800">
     <Grid Margin="40,20,40,0" Background="CornflowerBlue" Height="450"  VerticalAlignment="Top" HorizontalAlignment="Center">
         <ListView x:Name="listCustomers" Height="370" HorizontalAlignment="Left"  Margin="0,20,0,0" VerticalAlignment="Top" Width="300" Background="AntiqueWhite" Foreground="CornflowerBlue"  Visibility="Visible" MouseDoubleClick="onSelectedItem">

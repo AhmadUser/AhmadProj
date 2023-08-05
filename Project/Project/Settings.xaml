@@ -1,0 +1,35 @@
+﻿<Window x:Class="Project.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project"
+        mc:Ignorable="d"
+        Background="#007ACC"
+        WindowState="Maximized"
+        Icon="C:\Program Files (x86)\Saver\icon.png"
+        Title="Settings" Height="525.363" Width="800">
+    <Grid>
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,40,0,0" >
+            <TextBlock Text="Scanner Settings"
+                   FontSize="20"
+                   FontWeight="Bold" Margin="-264,-33,264,33"
+                       Foreground="White"
+                   />
+            <Border Height="2" Background="White" Margin="-264,-100,264,33"  />
+            <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Center" Width="229" Margin="-264,0,0,0" Background="White">
+                <TextBlock Foreground="#007ACC" Text="Select a compatible scanner to acquire the barcodes of the items. This will ensure accurate and efficient data capture during the process."
+               TextWrapping="Wrap" Margin="0,0,0,-13" />
+            </Grid>
+
+            <GroupBox Header="Choose a Scanner" Padding="1" Foreground="White" >
+
+                <ListBox  x:Name="listOfCams" Background="White" Width="200" Foreground="CornflowerBlue"  SelectionChanged="ListBox_SelectionChanged" Height="100" />
+
+
+            </GroupBox>
+        </Grid>
+
+        <Button Content="Save and Exit" HorizontalAlignment="Right" Margin="30" VerticalAlignment="Top" Width="91" Click="BackButton_Click" Background="Red" Foreground="White"/>
+    </Grid>
+</Window>

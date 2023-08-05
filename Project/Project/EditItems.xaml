@@ -7,40 +7,39 @@
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Background="AntiqueWhite"
-        Title="EditItems" Height="450" Width="800">
-    <Grid Height="396" Background="CornflowerBlue" >
-        <ListView x:Name="listItems" HorizontalAlignment="Left"  Margin="0,20,0,0" VerticalAlignment="Top" Width="300" Background="AntiqueWhite" Foreground="CornflowerBlue" SelectionChanged="onSelectedItem" Visibility="Visible">
-            <ListView.View  >
-
-
-                <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Items" >
-
-
-                    <GridViewColumn  Header="Items" Width="300" />
-
-
-
-                </GridView>
-
-            </ListView.View>
-        </ListView>
-        <fa:ImageAwesome
-            Spin="True" SpinDuration="3" x:Name="spinner" Margin="-134,141,134.333,91.667" Icon="Spinner"  Foreground="AntiqueWhite" Visibility="Hidden" />
-        <Label x:Name="InitialPriceLabel" Content="InitialPrice" Margin="460,25,0,0" Foreground="White" Visibility="Hidden" />
-        <TextBox x:Name="InitialPrice"  Margin="466,20,166.6,0" VerticalAlignment="Top" Height="32" Width="185" Visibility="Hidden"/>
-        <Label   x:Name="SellingPriceLabel"    Content="SellingPrice" Margin="460,165,0,0" Foreground="White" Visibility="Hidden" />
-        <TextBox x:Name="SellingPrice"  Margin="466,160,166.6,0" VerticalAlignment="Top" Height="32" Width="185" Visibility="Hidden"/>
-        <Label x:Name="CompanyNameLabel" Content="CompanyName" Margin="460,205,0,0" Foreground="White" Visibility="Hidden" />
-        <TextBox x:Name="CompanyName"  Margin="466,200,166.6,0" VerticalAlignment="Top" Height="32" Width="185" Visibility="Hidden"/>
-        <Label x:Name="PrivateNameLabel" Content="PrivateName" Margin="460,245,0,0" Foreground="White" Visibility="Hidden" />
-        <TextBox x:Name="PrivateName"  Margin="466,240,166.6,0" VerticalAlignment="Top" Height="32" Width="185" Visibility="Hidden"/>
-        <Label x:Name="BarcodeLabel" Content="Barcode" Margin="460,285,0,0" Foreground="White" Visibility="Hidden" />
-        <TextBox x:Name="Barcode"  Margin="466,280,166.6,0" VerticalAlignment="Top" Height="32" Width="185" Visibility="Hidden"/>
-        <Label x:Name="QuantityLabel" Content="Quantity" Margin="460,325,0,0" Foreground="White" Visibility="Hidden" />
-        <TextBox x:Name="Quantity"  Margin="466,320,166.6,0" VerticalAlignment="Top" Height="32" Width="185" Visibility="Hidden"/>
-        <Button x:Name="backButton"  Content="Back" HorizontalAlignment="Left" Margin="790,20,0,0" VerticalAlignment="Top" Width="75" Background="Red" Foreground="White"  Click="backAction" IsEnabled="False"/>
-        
-
+        Background="White"
+         Icon="C:\Program Files (x86)\Saver\icon.png"
+        Title="Edit Items" Height="450" Width="800">
+    <Grid Height="396" Background="#007ACC">
+        <Grid HorizontalAlignment="Left" Width="200">
+            <ListView x:Name="listItems" HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="300" Background="White" Foreground="#007ACC" SelectionChanged="onSelectedItem" Visibility="Visible">
+                <ListView.View>
+                    <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Items">
+                        <GridViewColumn Header="Items" Width="300" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <fa:ImageAwesome Spin="True" SpinDuration="3" x:Name="spinner" Margin="-134,141,134.333,91.667" Icon="Spinner" Foreground="White" Visibility="Hidden" />
+        <Grid HorizontalAlignment="Center" Width="282" Margin="0,50,0,50">
+            <Label x:Name="InitialPriceLabel" Content="Initial Price" Margin="460,15,0,0" Foreground="White" Visibility="Hidden" />
+            <TextBox x:Name="InitialPrice" Margin="461,30,0,0" VerticalAlignment="Top" Foreground="#007ACC" Height="32" Width="185" Visibility="Hidden"/>
+            <Label x:Name="SellingPriceLabel" Content="Selling Price" Margin="460,65,0,0" Foreground="White" Visibility="Hidden" />
+            <TextBox x:Name="SellingPrice" Margin="461,80,0,0" VerticalAlignment="Top" Height="32" Width="185" Visibility="Hidden"/>
+            <Label x:Name="CompanyNameLabel" Content="Company Name" Margin="460,115,0,0" Foreground="White" Visibility="Hidden" />
+            <TextBox x:Name="CompanyName" Margin="461,130,0,0" VerticalAlignment="Top" Height="32" Width="185" Visibility="Hidden"/>
+            <Label x:Name="PrivateNameLabel" Content="Private Name" Margin="460,165,0,0" Foreground="White" Visibility="Hidden" />
+            <TextBox x:Name="PrivateName" Margin="461,180,0,0" VerticalAlignment="Top" Height="32" Width="185" Visibility="Hidden"/>
+            <Label x:Name="BarcodeLabel" Content="Barcode" Margin="460,215,0,0" Foreground="White" Visibility="Hidden" />
+            <TextBox x:Name="Barcode" Margin="461,230,0,0" VerticalAlignment="Top" Height="32" Width="185" Visibility="Hidden"/>
+            <Label x:Name="QuantityLabel" Content="Quantity" Margin="460,265,0,0" Foreground="White" Visibility="Hidden" />
+            <TextBox x:Name="Quantity" Margin="461,280,0,0" VerticalAlignment="Top" Height="32" Width="185" Visibility="Hidden"/>
+        </Grid>
+        <Grid Width="100" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="50">
+        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Right" Margin="20,20,0,0" VerticalAlignment="Top" Width="75" Background="Red" Foreground="White" Click="backAction"/>
+        <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Right" Margin="20,100,0,0" VerticalAlignment="Top" Width="75" Background="Yellow" Foreground="#007ACC" Click="saveButton_Click"/>
+        </Grid>
     </Grid>
+
 </Window>
+

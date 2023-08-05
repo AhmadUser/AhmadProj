@@ -7,43 +7,39 @@
         xmlns:local="clr-namespace:Project"
         mc:Ignorable="d"
         Background="White"
+        Icon="C:\Program Files (x86)\Saver\icon.png"
         WindowStartupLocation="CenterScreen"
         Title="Saver" Height="350" Width="500">
     <StackPanel>
-        <Grid>
-            <Grid HorizontalAlignment="Left" Height="209" Margin="100,50,0,0" VerticalAlignment="Top" Width="300" Background="DarkBlue">
-                <Button x:Name="showPass"  Content="Show" HorizontalAlignment="Left" Margin="265,101,0,0" VerticalAlignment="Top" Width="25" Height="30" FontSize="8" Background="LightBlue" Foreground="DarkBlue" Click="showPassFunc">
-                    <Button.Resources>
-                        <Style TargetType="Button">
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="10">
-                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Resources>
+        <Grid x:Name="main">
+            <Grid  Height="350"  VerticalAlignment="Center" HorizontalAlignment="Center"  Width="500" Background="#007ACC">
+                <fa:ImageAwesome Icon="SignIn" Foreground="White" Margin="187,37,194,278" />
+
+                <Button   x:Name="showPass" Content="Show" HorizontalAlignment="Left" Margin="360,190,0,0" VerticalAlignment="Top" Width="23" Height="20" FontSize="8"  Background="#007ACC" Click="showPassFunc">
+
+                    <Button.ContentTemplate>
+                        <DataTemplate>
+                            <fa:ImageAwesome Icon="Eye" Width="20" Height="20" Foreground="White" />
+                        </DataTemplate>
+                    </Button.ContentTemplate>
+                </Button>
+                <Button x:Name="hidePass" Visibility="Hidden" Content="Show" HorizontalAlignment="Left" Margin="360,190,0,0" VerticalAlignment="Top" Width="23" Height="20" FontSize="8"  Background="#007ACC" Click="showPassFunc">
+
+                    <Button.ContentTemplate>
+                        <DataTemplate>
+                            <fa:ImageAwesome Icon="EyeSlash" Width="20" Height="20" Foreground="White" />
+                        </DataTemplate>
+                    </Button.ContentTemplate>
+
                 </Button>
             </Grid>
-            <Label Content="User Name:" HorizontalAlignment="Left" Margin="150,80,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Century Gothic">
-            </Label>
-            <TextBox HorizontalAlignment="Left" x:Name="user"  Height="30" Margin="150,100,0,0"  VerticalAlignment="Top" Width="200" />
-            <Label Content="Password:" HorizontalAlignment="Left" Margin="150,130,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Century Gothic"/>
-            <TextBox x:Name="passVisible"  HorizontalAlignment="Left" Margin="150,150,0,0" VerticalAlignment="Top" Width="200" Height="30" Visibility="Hidden" />
-            <PasswordBox x:Name="pass"  HorizontalAlignment="Left" Margin="150,150,0,0" VerticalAlignment="Top" Width="200" Height="30"  />
-            <Button Content="Login"  HorizontalAlignment="Left" Margin="150,210,0,0" VerticalAlignment="Top" Width="92" Foreground="white" FontFamily="Century Gothic" Background="CornflowerBlue" Click="performLoginAsync" Height="21"/>
-            <Button Content="Cancel"  HorizontalAlignment="Left" Margin="258,210,0,0" VerticalAlignment="Top" Width="92" Foreground="white" FontFamily="Century Gothic" Background="Red" Click="performLoginAsync" Height="21"/>
-
-            <fa:ImageAwesome
-            Spin="True" SpinDuration="3" x:Name="spinner" Margin="0,50,0,0" Icon="Spinner" Foreground="DarkBlue" Height="50" Visibility="Hidden"/>
+            <Label Content="User Name:" HorizontalAlignment="Left" Margin="150,80,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Century Gothic"/>
+            <TextBox HorizontalAlignment="Center" x:Name="user"  Height="30" Margin="0,110,0,0"  VerticalAlignment="Top" Width="200"/>
+            <Label Content="Password:" HorizontalAlignment="Left" Margin="150,155,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Century Gothic"/>
+            <TextBox x:Name="passVisible"  HorizontalAlignment="Center" Margin="0,185,0,0" VerticalAlignment="Top" Width="200" Height="30" Visibility="Hidden"/>
+            <PasswordBox x:Name="pass"  HorizontalAlignment="Center" Margin="0,185,0,0" VerticalAlignment="Top" Width="200" Height="27"/>
+            <Button Content="Login"  HorizontalAlignment="Center" Margin="0,245,0,0"  VerticalAlignment="Top" Width="126" Foreground="White" FontFamily="Century Gothic" Background="LightGreen" Click="performLoginAsync" Height="30"/>
         </Grid>
+        <fa:ImageAwesome Spin="True" SpinDuration="3" x:Name="spinner" Margin="0,-175,0,0" Icon="Spinner" Foreground="White" Height="100" Visibility="Hidden" />
     </StackPanel>
 </Window>
-
-

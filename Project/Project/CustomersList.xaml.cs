@@ -53,8 +53,8 @@ namespace Project
         private void onSelectedItem(object sender, MouseButtonEventArgs e)
         {
             Customer selectedCustomer = new Customer();
-            CreateOrder createOrder = new CreateOrder();
-            createOrder.Show();
+            //CreateOrder createOrder = new CreateOrder();
+            //createOrder.Show();
             this.Close();
         }
     }
