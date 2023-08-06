@@ -11,47 +11,48 @@
         WindowState="Maximized"
         Background="#007ACC"
         Closing="MainWindow_Closing"
-        Title="Menu" Height="700px" Width="850">
+        Title="Menu" Height="700px" Width="1500px">
 
-    <StackPanel>
-        <Grid x:Name="primary" Height="600">
-            <Menu Background="#007ACC" Foreground="White">
+    <StackPanel  Height="700px" Width="1500px">
+        <Grid x:Name="primary" Height="700px"  Width="1500px">
+            <Menu Background="#F2F2F2" Foreground="White" >
 
-                <MenuItem Header="New Order" Height="30" Width="120" Background="#0A6B9E" Foreground="White">
+                <MenuItem Header="New Order" Height="30" Width="250px" Background="#0A6B9E" Foreground="White">
                 </MenuItem>
-                <MenuItem Header="Store Manager" Height="30" Width="120" Background="#0A6B9E" Foreground="White">
+                <MenuItem Header="Store Manager" Height="30" Width="250px" Background="#0A6B9E" Foreground="White">
                     <MenuItem Header="Add" Height="30" Width="120" Background="#0A6B9E" Foreground="White" Click="goToAddItem"/>
                     <MenuItem Header="Edit" Height="30" Width="120" Background="#0A6B9E" Foreground="White" Click="goToEdit"/>
                 </MenuItem>
-                <MenuItem Header="Customers" Height="30" Width="120" Background="#0A6B9E" Foreground="White">
+                <MenuItem Header="Customers" Height="30" Width="250px" Background="#0A6B9E" Foreground="White">
                     <MenuItem Header="Add" Height="30" Width="120" Background="#0A6B9E" Foreground="White"/>
                     <MenuItem Header="Edit" Height="30" Width="120" Background="#0A6B9E" Foreground="White"/>
                 </MenuItem>
-                <MenuItem Header="Dealers" Height="30" Width="120" Background="#0A6B9E" Foreground="White">
+                <MenuItem Header="Dealers" Height="30" Width="250px" Background="#0A6B9E" Foreground="White">
                     <MenuItem Header="Add" Height="30" Width="120" Background="#0A6B9E" Foreground="White"/>
                     <MenuItem Header="Edit" Height="30" Width="120" Background="#0A6B9E" Foreground="White"/>
                 </MenuItem>
-                <MenuItem Header="Unpaid Orders" Height="30" Width="120" Background="#0A6B9E" Foreground="White">
+                <MenuItem Header="Orders" Height="30" Width="250px" Background="#0A6B9E" Foreground="White">
                 </MenuItem>
-                <MenuItem Header="Settings" Height="30" Width="120" Background="#0A6B9E" Foreground="White" Click="goToSettings">
+                <MenuItem Header="Settings" Height="30" Width="250px" Background="#0A6B9E" Foreground="White" Click="goToSettings">
                 </MenuItem>
+          
             </Menu>
             <!--SelectionChanged="onSelectedItem"-->
-            <ListView HorizontalAlignment="Left" x:Name="listItems" Margin="20,50,0,0" Background="White" Foreground="#007ACC" Visibility="Visible" Height="{Binding ActualHeight, ElementName=primary}" Width="520" ItemsSource="{Binding Products}" MouseDoubleClick="ListView_MouseDoubleClick">
-        
+            <ListView HorizontalAlignment="Left" x:Name="listItems" Margin="20,50,0,10" Background="White" Foreground="#007ACC" Visibility="Visible" Height="{Binding ActualHeight, ElementName=primary}" Width="520" ItemsSource="{Binding Products}" MouseDoubleClick="ListView_MouseDoubleClick">
+
 
 
 
                 <ListView.View>
-                    
+
                     <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Item Name">
-                        
-                        <GridViewColumn Header="Item Name" Width="150" DisplayMemberBinding="{Binding PrivateName}" />
-                        <GridViewColumn Header="Item Barcode" Width="150" DisplayMemberBinding="{Binding Barcode}" />
-                        <GridViewColumn Header="Item Price" Width="150" DisplayMemberBinding="{Binding SellingPrice}" />
+
+                        <GridViewColumn Header="Item Name" Width="130" DisplayMemberBinding="{Binding PrivateName}" />
+                        <GridViewColumn Header="Item Barcode" Width="130" DisplayMemberBinding="{Binding Barcode}" />
+                        <GridViewColumn Header="Item Price" Width="130" DisplayMemberBinding="{Binding SellingPrice}" />
 
                         <!-- Add a CheckBox column for selection IsSelected-->
-                        <GridViewColumn Header="Select" >
+                        <GridViewColumn Header="Select" Width="130">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" Checked="selectItem_Checked" x:Name="selectItem" Unchecked="unselectItem_Checked"   />
@@ -65,7 +66,7 @@
             </ListView>
 
 
-            <Grid x:Name="incrementer" Margin="570,144,107,0" Background="White" Height="182" VerticalAlignment="Top" Width="200">
+            <Grid x:Name="incrementer"  Background="White" Height="182" VerticalAlignment="Center" Width="200px" HorizontalAlignment="Center" Margin="635,215,665,203">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -78,8 +79,9 @@
                 <TextBox x:Name="priceContainer"  Text="{Binding TotalPrice}"   Grid.Row="1" Background="White" Foreground="#007ACC" BorderThickness="1" BorderBrush="#007ACC" HorizontalAlignment="Center" Width="120" Margin="0,50,0,-46"  />
                 <Button Grid.Row="1" Content="Create Order" Background="#0A6B9E" Foreground="White" BorderThickness="0" HorizontalAlignment="Center" Width="120" Margin="0,113,0,-98" Click="createOrder" />
             </Grid>
-            <Grid Height="20" Width="200" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="50">
-                <TextBox x:Name="barcodeManual"  Foreground="#007ACC" KeyDown="TextBoxInput_KeyDown" >
+            <Grid Height="20" Width="100px" HorizontalAlignment="Right" VerticalAlignment="center">
+                <Label Content="Enter Barcode Manually" Background="White" Foreground="#007ACC" Margin="-756,184,656,-242" HorizontalAlignment="Right" Width="200"/>
+                <TextBox x:Name="barcodeManual"  Foreground="#007ACC" KeyDown="TextBoxInput_KeyDown" Margin="-756,224,656,-242" HorizontalAlignment="Right" Width="200" >
                     <TextBox.Style >
                         <Style TargetType="TextBox">
                             <Setter Property="Text" Value="" />
@@ -96,21 +98,23 @@
                 </TextBox>
             </Grid>
 
-            <Button Content="Refresh"  Foreground="White" BorderThickness="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,40,10" Click="Button_Click" >
+            <Button Content="Refresh"  Background="#0A6B9E" BorderThickness="0"  VerticalAlignment="Top"  Click="Button_Click" Height="57" Margin="1249,50,169,0">
                 <Button.ContentTemplate>
                     <DataTemplate>
-                        <fa:ImageAwesome Icon="Refresh" Width="20" Height="20" Foreground="#007ACC" />
+                        <fa:ImageAwesome Icon="Refresh" Width="50" Height="30" Foreground="White" />
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>
-
-
         </Grid>
         <!--Click="refreshButtonClick"-->
 
 
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <fa:ImageAwesome Spin="True" SpinDuration="3" x:Name="spinner"  Icon="Spinner" Foreground="#0A6B9E" Height="151" Margin="169,-395,78,395" Visibility="Hidden"/>
 
-        <fa:ImageAwesome Spin="True" SpinDuration="3" x:Name="spinner" Margin="0,-150,0,0" Icon="Spinner" Foreground="White" Height="100" Visibility="Hidden"/>
+
+        </Grid>
+        <!--Visibility="Hidden"-->
 
 
     </StackPanel>

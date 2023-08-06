@@ -136,7 +136,6 @@ C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\System.Security.P
 C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\Twilio.xml
 C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\zxing.xml
 C:\Users\Lenovo\source\repos\Project\Project\Project\bin\Debug\zxing.presentation.xml
-C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\Menue.baml
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddAddress.g.cs
 C:\Users\Lenovo\source\repos\Project\Project\Project\obj\Debug\AddCustomer.g.cs

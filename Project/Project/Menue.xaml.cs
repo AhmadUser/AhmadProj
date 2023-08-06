@@ -360,6 +360,8 @@ namespace Project
             totalPrice = newTotal;
             priceContainer.Text = "" + newTotal;
         }
+
+
     }
 
 }
